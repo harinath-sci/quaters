@@ -1,0 +1,27 @@
+<form class="mt-3" [formGroup]="VehicForm"  (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field class="w-75" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name"/>
+          
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="w-75" appearance="outline">
+          <mat-label>Faculty_ID</mat-label>
+          <input matInput type="text" formControlName="ID" />
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>type of vehicle</mat-label>
+            <mat-select formControlName="count">
+              <mat-option value="one1">Two-Wheeler</mat-option>
+              <mat-option value="two1">Four-Wheeler</mat-option>                                                                                                                                        2   +                                                                                                                                                                       
+            </mat-select>
+          </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit"  [disabled]="!VehicForm.valid">SUBMIT</button>
+</form>
+    
+    

@@ -1,0 +1,26 @@
+<form class="mt-3" [formGroup]="Info1"  (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field class="w-75" appearance="outline">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" formControlName="name"/>
+          
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field class="w-75" appearance="outline">
+          <mat-label>ROLL-NUMBER</mat-label>
+          <input matInput type="text" formControlName="ID" />
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline">
+            <mat-label>type of vehicle</mat-label>
+            <mat-select formControlName="count">
+              <mat-option value="one1">State board</mat-option>
+              <mat-option value="two1">CBSE</mat-option> 
+              <mat-option value="tHREE1">ICSE</mat-option>                                                                                                                                       2   +                                                                                                                                                                       
+            </mat-select>
+          </mat-form-field>
+    </p>
+    <button mat-raised-button color="primary" type="submit"  [disabled]="!Info1.valid">SUBMIT</button>
+</form>

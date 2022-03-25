@@ -1,0 +1,64 @@
+<form class="mt-3" [formGroup]="detail"  (ngSubmit)="onSubmit()">
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Year</mat-label>
+                    <mat-select formControlName="year">
+                      <mat-option value="2019">2019</mat-option>
+                      <mat-option value="2020">2020</mat-option>  
+                      <mat-option value="2021">2021</mat-option>      
+                      <mat-option value="2022">2022</mat-option>                                                                                                                                 2   +                                                                                                                                                                       
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+        </div>
+        <div class="col-6">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Degree</mat-label>
+                    <mat-select formControlName="degree">
+                      <mat-option value="btech">B.Tech</mat-option>
+                      <mat-option value="Bio-medical">Bio-Medical</mat-option> 
+                      <mat-option value="int-physics">Integrated physics</mat-option>  
+                      <mat-option value="Nature_science">Nature science</mat-option>    
+                      <mat-option value="MBA">MBA</mat-option>                                                                                                                           2   +                                                                                                                                                                       
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+        </div>
+        <div class="col-9">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Branch</mat-label>
+                    <mat-select formControlName="branch">
+                      <mat-option value="cse">CSE</mat-option>
+                      <mat-option value="ECE">ECE</mat-option>  
+                      <mat-option value="CCE">CCE</mat-option>        
+                      <mat-option value="EEE">EEE</mat-option> 
+                      <mat-option value="MSC">MSC</mat-option>
+                      <mat-option value="BSC">BSC</mat-option>                                                                                                                    2   +                                                                                                                                                                       
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+        </div>
+        <div class="col-12">
+            <p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Section</mat-label>
+                    <mat-select formControlName="section">
+                      <mat-option value="a">A</mat-option>
+                      <mat-option value="b">B</mat-option>  
+                      <mat-option value="c">C</mat-option>        
+                      <mat-option value="d">D</mat-option> 
+                      <mat-option value="e">E</mat-option>
+                      <mat-option value="f">F</mat-option>                                                                                                                    2   +                                                                                                                                                                       
+                    </mat-select>
+                  </mat-form-field>
+            </p>
+        </div>
+    </div>
+</div>
+<button mat-raised-button color="primary" type="submit"  [disabled]="!detail.valid">SUBMIT</button>
+</form>
